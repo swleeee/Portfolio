@@ -11,7 +11,7 @@ function Nav() {
   return (
     <Container>
       <Home>
-        <div>SWLEE</div>
+        <div>SWLEE_PORTFOLIO</div>
       </Home>
       <MenuBox>
         <div>SKILL</div>
@@ -48,7 +48,8 @@ const Home = styled.div`
   //   font-size: 30px;
 
   div {
-    font-family: Hyemin_Bold;
+    font-family: KOHIBOLD;
+    // font-family: Hyemin_Bold;
     font-size: 30px;
   }
 `;
