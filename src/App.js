@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from './components/Nav';
 import Banner from './components/Banner';
 import Skill from './containers/skill';
+import Project from './containers/project';
 import styled from 'styled-components';
 import app from './App.css';
 
@@ -11,6 +12,7 @@ function App() {
       <Nav />
       <Banner />
       <Skill />
+      <Project />
       <Footer>
         <a href="https://www.freepik.com/photos/technology">
           Technology photo created by pressfoto - www.freepik.com
@@ -30,6 +32,7 @@ const Container = styled.div`
   // background-color: green;
 
   width: 100%;
+  // height: 100%;
   // height: 100vh;
 `;
 
