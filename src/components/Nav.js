@@ -14,7 +14,7 @@ function Nav() {
         <div>SWLEE_PORTFOLIO</div>
       </Home>
       <MenuBox>
-        <div>SKILL</div>
+        <div>SKILLS</div>
         <div>PROJECT</div>
         <div>CONTACT</div>
       </MenuBox>
@@ -26,6 +26,7 @@ export default Nav;
 
 const Container = styled.div`
   //   background-color: #733c78;
+  //   background-color: #746454;
   height: 100px;
   display: flex;
   justify-content: space-between;

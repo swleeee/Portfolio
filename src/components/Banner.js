@@ -80,7 +80,10 @@ const TextBox = styled.div`
   position: absolute;
 
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.65);
+  //   background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(127, 114, 95, 0.65);
+  //   background-color: rgba(255, 254, 242, 0.65);
+
   //   background: linear-gradient(180deg, rgba(150, 150, 150, 0.7), transparent);
 
   color: #fff;
@@ -156,6 +159,7 @@ const Description = styled.div`
   box-sizing: border-box;
   > p {
     // width: 0px;
+
     display: ${(props) => (props.active ? 'block' : 'none')};
     transition-delay: 1s;
     // opacity: ${(props) => (props.active ? '0.6' : '1')};
