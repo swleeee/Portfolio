@@ -1,6 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
-import tuthree_img from '../images/project/Tuthree/TuThree1.png';
+import tuthree_img1 from '../images/project/Tuthree/TuThree1.png';
+import tuthree_img2 from '../images/project/Tuthree/TuThree2.png';
+import tuthree_img3 from '../images/project/Tuthree/TuThree3.png';
+import tuthree_img4 from '../images/project/Tuthree/TuThree4.png';
+import tuthree_img5 from '../images/project/Tuthree/TuThree5.png';
+import tuthree_img6 from '../images/project/Tuthree/TuThree6.png';
+import tuthree_img7 from '../images/project/Tuthree/TuThree7.png';
+import tuthree_img8 from '../images/project/Tuthree/TuThree8.png';
+import tuthree_img9 from '../images/project/Tuthree/TuThree9.png';
+import tuthree_img10 from '../images/project/Tuthree/TuThree10.png';
+import tuthree_img11 from '../images/project/Tuthree/TuThree11.png';
+import tuthree_img12 from '../images/project/Tuthree/TuThree12.png';
+import tuthree_img13 from '../images/project/Tuthree/TuThree13.png';
+import tuthree_img14 from '../images/project/Tuthree/TuThree14.png';
+import tuthree_img15 from '../images/project/Tuthree/TuThree15.png';
+import tuthree_img16 from '../images/project/Tuthree/TuThree16.png';
+import tuthree_img17 from '../images/project/Tuthree/TuThree17.png';
+
+import pyhu_img1 from '../images/project/PYHU/PYHU1.png';
+import pyhu_img2 from '../images/project/PYHU/PYHU2.png';
+import pyhu_img3 from '../images/project/PYHU/PYHU3.png';
+import pyhu_img4 from '../images/project/PYHU/PYHU4.png';
+import pyhu_img5 from '../images/project/PYHU/PYHU5.png';
+import pyhu_img6 from '../images/project/PYHU/PYHU6.png';
+import pyhu_img7 from '../images/project/PYHU/PYHU7.png';
+import pyhu_img8 from '../images/project/PYHU/PYHU8.png';
+import pyhu_img9 from '../images/project/PYHU/PYHU9.png';
+import pyhu_img10 from '../images/project/PYHU/PYHU10.png';
+import pyhu_img11 from '../images/project/PYHU/PYHU11.png';
+import pyhu_img12 from '../images/project/PYHU/PYHU12.png';
+
 import ProjectCard from '../components/ProjectCard';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -21,11 +51,11 @@ const settings = {
 
 const data = [
   {
-    tag: '팀(3인)',
+    tag: '팀(3인) / 12주',
     name: 'TuThree',
     description: '웹 기반 과외 통합 플랫폼',
     content:
-      '과외 선생님과 학생 간 과외 매칭을 도와주고 매칭이 된 그룹은 일정 관리 시스템을 통해 과외에 대한 전반적인 사항을 관리할 수 있는 웹 사이트입니다.',
+      '과외 선생님과 학생 간 과외 매칭을 도와주고 매칭이 된 그룹은 일정 관리 시스템을 통해 과외에 대한 전반적인 사항을 관리할 수 있는 웹 사이트',
     func: [
       {
         overview: '과외 매칭',
@@ -51,36 +81,66 @@ const data = [
     tech: 'React, MobX',
     link: 'https://github.com/swleeee/tuthree-front',
 
-    src: `${tuthree_img}`,
+    img_src: [
+      `${tuthree_img1}`,
+      `${tuthree_img2}`,
+      `${tuthree_img3}`,
+      `${tuthree_img4}`,
+      `${tuthree_img5}`,
+      `${tuthree_img6}`,
+      `${tuthree_img7}`,
+      `${tuthree_img8}`,
+      `${tuthree_img9}`,
+      `${tuthree_img10}`,
+      `${tuthree_img11}`,
+      `${tuthree_img12}`,
+      `${tuthree_img13}`,
+      `${tuthree_img14}`,
+      `${tuthree_img15}`,
+      `${tuthree_img16}`,
+      `${tuthree_img17}`,
+    ],
   },
   {
-    tag: '팀(3인)',
-    name: 'TuThree',
-    description: '웹 기반 과외 통합 플랫폼',
+    tag: '팀(5인) / 4주',
+    name: '푸쳐헬썹',
+    description: '건강 관리 앱',
     content:
-      '과외 선생님과 학생 간 과외 매칭을 도와주고 매칭이 된 그룹은 일정 관리 시스템을 통해 과외에 대한 전반적인 사항을 관리할 수 있으며 해당 자녀의 부모님 또한 열람할 수 있습니다.',
+      '코로나로 인해 건강관리 시설 이용의 어려움이 따르기 때문에 집에서도 쉽게 운동을 하고 식단 관리를 도와주며 챌린지를 통해 목표를 설정하여 진행사항을 확인할 수 있는 앱',
     func: [
       {
-        overview: '과외 매칭',
-        detail: 'sdfsdfsdf',
+        overview: '식단 분석',
+        detail:
+          'Firebase에서 제공하는 ML Kit API를 사용하여 객체를 분류를 한 후 번역한 것과 해당 칼로리들을 DB에 저장한다. 사용자가 사진을 찍으면 음식이 인식이 되어 어떤 음식인지, 해당 칼로리는 얼마인지 보여준다',
       },
       {
-        overview: '일정 관리',
-        detail: 'sdfsdfsdf',
+        overview: '운동 동작 인식',
+        detail:
+          'Teachable Machine을 통해 운동 모델을 빠르게 구축하여 추출한다. 사용자가 해당 운동을 선택하면 웹뷰를 통해 동작을 인식한다. 해당 동작을 정확히 수행했을 경우 카운트가 되며 총 개수를 채웠을 경우 성공 처리가 된다',
       },
       {
-        overview: '화상 강의',
-        detail: 'sdfsdfsdf',
-      },
-      {
-        overview: '채점 서비스',
-        detail: 'sdfsdfsdf',
+        overview: '챌린지',
+        detail:
+          '사용자가 챌린지 이름, 모집 기간, 챌린지 기간, 구성 내용 등을 작성하여 챌린지를 추가할 수 있으며 누구나 챌린지를 신청하여 참여할 수 있다. 챌린지에 참여한 사용자는 챌린지 기간 동안 미션을 수행하며 진행사항을 확인할 수 있다.',
       },
     ],
-    tech: 'React, MobX',
-    link: 'https://github.com/swleeee/tuthree-front',
+    tech: 'Android, Java, Tensorflow',
+    link: '',
 
-    src: `${tuthree_img}`,
+    img_src: [
+      `${pyhu_img1}`,
+      `${pyhu_img2}`,
+      `${pyhu_img3}`,
+      `${pyhu_img4}`,
+      `${pyhu_img5}`,
+      `${pyhu_img6}`,
+      `${pyhu_img7}`,
+      `${pyhu_img8}`,
+      `${pyhu_img9}`,
+      `${pyhu_img10}`,
+      `${pyhu_img11}`,
+      `${pyhu_img12}`,
+    ],
   },
 ];
 function Project() {
@@ -176,7 +236,7 @@ const Items = styled.div`
 
 const SliderContainer = styled(Slider)`
   //   border: 2px solid green;
-  height: 500px;
+  height: 600px;
   width: 100%;
   //   background-color: rgba(0, 0, 0, 0.5);
   //   background-color: #7f705e;

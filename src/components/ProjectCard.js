@@ -5,12 +5,29 @@ import {
   Route,
   BrowserRouter as Router,
 } from 'react-router-dom';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+const img_slide_settings = {
+  //   dots: true, // 슬라이드 밑에 점 보이게
+  //   infinite: true, // 무한으로 반복
+  speed: 500,
+  autoplay: true,
+  autoplaySpeed: 2000, // 넘어가는 속도
+  slidesToShow: 1, // 4장씩 보이게
+  slidesToScroll: 1, // 1장씩 뒤로 넘어가게
+  centerMode: true,
+  centerPadding: '5px', // 0px 하면 슬라이드 끝쪽 이미지가 안잘림
+  arrows: false,
+};
 
 function ProjectCard(props) {
   //   const items = props.item;
   //   const {name, content, src} = props.item;
 
-  const { tag, name, description, content, func, tech, link, src } = props.item;
+  const { tag, name, description, content, func, tech, link, img_src } =
+    props.item;
   const [Tooltip, setTooltip] = useState(-1);
   console.info(func);
   //   console.info(items);
@@ -29,7 +46,15 @@ function ProjectCard(props) {
         </Title>
         <Contents>
           <ImgBox>
-            <img src={src} />
+            <SliderContainer {...img_slide_settings}>
+              {img_src.map((src) => {
+                return (
+                  //   <div>
+                  <img src={src} />
+                  //   </div>
+                );
+              })}
+            </SliderContainer>
             {/* <div>{name}</div> */}
           </ImgBox>
           <Content>
@@ -109,6 +134,8 @@ const Container = styled.div`
   background-color: #7f705e;
   cursor: pointer;
   width: 80%;
+  padding-bottom: 30px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   box-shadow: -5px 7px 7px rgba(0, 0, 0, 0.8);
@@ -151,8 +178,8 @@ const ImgBox = styled.div`
   display: flex;
   padding: 5px;
   box-sizing: border-box;
-  width: 400px;
-  height: 300px;
+  width: 100%;
+  //   height: 300px;
   > img {
     width: inherit;
   }
@@ -201,7 +228,7 @@ const Title = styled.div`
     border: 25px solid #ddd4ae; /* All borders set */
     border-left: 0; /* Remove left border */
     border-right: 30px solid transparent; /* Right transparent */
-    width: 100px;
+    width: 150px;
   }
   div:nth-of-type(4) {
     position: absolute;
@@ -329,5 +356,32 @@ const Link = styled(Connection)`
     font-weight: bold;
     // color: #eb7252;
     color: #000000;
+  }
+`;
+const SliderContainer = styled(Slider)`
+  width: 100%;
+  overflow: hidden;
+  > div:nth-of-type(1) {
+    width: 100%;
+    // width: 400px;
+    height: 350px;
+    // overflow: hidden;
+
+    > div {
+      position: absolute;
+      box-sizing: border-box;
+    }
+  }
+
+  .slick-dots {
+    bottom: 10px;
+  }
+  img {
+    max-width: 100%;
+    // height: auto;
+    display: block;
+    // object-fit: fill;
+    object-fit: contain;
+    height: 360px;
   }
 `;
