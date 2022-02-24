@@ -62,7 +62,7 @@ const OuterContainer = styled.div`
   z-index: 999;
   // background-color: white;
   // background-color: #9a86b3;
-  background-color: ${(props) => (props.active ? 'white' : '#6d5b74')};
+  background-color: ${(props) => (props.active ? 'white' : '#a69777')};
   // background-color: #6d5b74;
   border-bottom: ${(props) => (props.active ? '2px solid black' : 'none')};
 
@@ -105,7 +105,7 @@ const MenuBox = styled.div`
   align-items: center;
 
   div {
-    margin: 0 10px;
+    margin: 0 20px;
     font-family: Hyemin_Bold;
     font-size: 24px;
     cursor: pointer;

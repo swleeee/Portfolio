@@ -21,3 +21,39 @@
   font-weight: 50;
   src: url('./fonts/IM_Hyemin-Regular.ttf');
 }
+
+@font-face {
+  font-family: 'SB_B';
+  font-weight: 50;
+  src: url('./fonts/SB\ 어그로\ B.ttf');
+}
+
+@font-face {
+  font-family: 'SB_L';
+  font-weight: 50;
+  src: url('./fonts/SB\ 어그로\ L.ttf');
+}
+
+@font-face {
+  font-family: 'SB_M';
+  font-weight: 50;
+  src: url('./fonts/SB\ 어그로\ M.ttf');
+}
+
+@font-face {
+  font-family: 'SCDream1';
+  font-weight: 50;
+  src: url('./fonts/SCDream1.otf');
+}
+
+@font-face {
+  font-family: 'SCDream3';
+  font-weight: 50;
+  src: url('./fonts/SCDream3.otf');
+}
+
+@font-face {
+  font-family: 'SCDream5';
+  font-weight: 50;
+  src: url('./fonts/SCDream5.otf');
+}

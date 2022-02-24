@@ -63,6 +63,7 @@ const Container = styled.div`
 
 const RefBox = styled.div`
   width: 100%;
+  z-index: 2;
 `;
 
 const Footer = styled.div``;
