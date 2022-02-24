@@ -4,14 +4,16 @@ import app from './App.css';
 
 import Nav from './components/Nav';
 import Banner from './components/Banner';
-import Skill from './containers/skill';
-import Project from './containers/project';
-import Contact from './containers/contact';
+import About from './containers/About';
+import Skill from './containers/Skill';
+import Project from './containers/Project';
+import Contact from './containers/Contact';
 
 function App() {
   const scrollToRef = (ref) =>
     window.scrollTo({ top: ref.current.offsetTop - 64, behavior: 'smooth' });
 
+  const aboutRef = useRef(null);
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
@@ -19,6 +21,7 @@ function App() {
   const scrollTo = {
     toTop: () => window.scrollTo({ top: 0, behavior: 'smooth' }),
 
+    about: () => scrollToRef(aboutRef),
     skills: () => scrollToRef(skillsRef),
     projects: () => scrollToRef(projectsRef),
     contact: () => scrollToRef(contactRef),
@@ -28,8 +31,11 @@ function App() {
     <Container>
       <Nav scrollTo={scrollTo} />
       <Banner />
+      <RefBox ref={aboutRef}>
+        <About />
+      </RefBox>
       <RefBox ref={skillsRef}>
-        <Skill ref={skillsRef} />
+        <Skill />
       </RefBox>
       <RefBox ref={projectsRef}>
         <Project />

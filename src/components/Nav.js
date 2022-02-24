@@ -43,6 +43,7 @@ function Nav(props) {
           <div onClick={scrollTo.toTop}>SWLEE_PORTFOLIO</div>
         </Home>
         <MenuBox>
+          <div onClick={scrollTo.about}>ABOUT</div>
           <div onClick={scrollTo.skills}>SKILLS</div>
           <div onClick={scrollTo.projects}>PROJECT</div>
           <div onClick={scrollTo.contact}>CONTACT</div>

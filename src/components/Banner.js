@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 import developer_img from '../images/working-code.jpg';
-import banner_img from '../images/banner1.png';
 
 // const TypeingText = () => {
 //   return <p className="text">{Text}</p>;
@@ -86,26 +85,6 @@ const Container = styled.div`
   width: 100%;
   height: 70vh;
   position: relative;
-`;
-const ImageBox = styled.div`
-  position: absolute;
-  top: 50%;
-  // left: 50%;
-  left: 5%;
-  transform: translateY(-50%);
-  // transform: translate(-50%, -50%);
-  width: 400px;
-  height: 400px;
-  // border: 2px solid red;
-  // border-radius: 5px;
-  border-radius: 50%;
-  overflow: hidden;
-  z-index: 5;
-  > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 `;
 
 const move = keyframes`
@@ -278,6 +257,6 @@ const Description = styled.div`
     font-size: 22px;
     word-break: keep-all;
     font-weight: bold;
-    font-family: SCDream5;
+    font-family: SCDream7;
   }
 `;

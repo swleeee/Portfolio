@@ -57,3 +57,9 @@
   font-weight: 50;
   src: url('./fonts/SCDream5.otf');
 }
+
+@font-face {
+  font-family: 'SCDream7';
+  font-weight: 50;
+  src: url('./fonts/SCDream7.otf');
+}
