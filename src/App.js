@@ -44,9 +44,6 @@ function App() {
         <Contact />
       </RefBox>
       <Footer>
-        <a href="https://www.freepik.com/photos/technology">
-          Technology photo created by pressfoto - www.freepik.com
-        </a>
         <div>© 2022. Lee Sang Won. All rights reserved.</div>
       </Footer>
     </Container>
