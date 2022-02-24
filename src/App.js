@@ -1,10 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
+import app from './App.css';
+
 import Nav from './components/Nav';
 import Banner from './components/Banner';
 import Skill from './containers/skill';
 import Project from './containers/project';
-import styled from 'styled-components';
-import app from './App.css';
+import Contact from './containers/contact';
 
 function App() {
   return (
@@ -13,10 +15,12 @@ function App() {
       <Banner />
       <Skill />
       <Project />
+      <Contact />
       <Footer>
         <a href="https://www.freepik.com/photos/technology">
           Technology photo created by pressfoto - www.freepik.com
         </a>
+        <div>© 2022. Lee Sang Won. All rights reserved.</div>
       </Footer>
     </Container>
   );
