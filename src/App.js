@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 import app from './App.css';
 
@@ -9,13 +9,34 @@ import Project from './containers/project';
 import Contact from './containers/contact';
 
 function App() {
+  const scrollToRef = (ref) =>
+    window.scrollTo({ top: ref.current.offsetTop - 64, behavior: 'smooth' });
+
+  const skillsRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const scrollTo = {
+    toTop: () => window.scrollTo({ top: 0, behavior: 'smooth' }),
+
+    skills: () => scrollToRef(skillsRef),
+    projects: () => scrollToRef(projectsRef),
+    contact: () => scrollToRef(contactRef),
+  };
+
   return (
     <Container>
-      <Nav />
+      <Nav scrollTo={scrollTo} />
       <Banner />
-      <Skill />
-      <Project />
-      <Contact />
+      <RefBox ref={skillsRef}>
+        <Skill ref={skillsRef} />
+      </RefBox>
+      <RefBox ref={projectsRef}>
+        <Project />
+      </RefBox>
+      <RefBox ref={contactRef}>
+        <Contact />
+      </RefBox>
       <Footer>
         <a href="https://www.freepik.com/photos/technology">
           Technology photo created by pressfoto - www.freepik.com
@@ -38,6 +59,10 @@ const Container = styled.div`
   width: 100%;
   // height: 100%;
   // height: 100vh;
+`;
+
+const RefBox = styled.div`
+  width: 100%;
 `;
 
 const Footer = styled.div``;

@@ -47,11 +47,11 @@ function Banner() {
         </div>
       </TextBox>
       <ImageBox
-        style={{
-          backgroundImage: `url(${developer_img})`,
-          backgroundPosition: 'center center',
-          backgroundSize: 'cover',
-        }}
+      // style={{
+      //   backgroundImage: `url(${developer_img})`,
+      //   backgroundPosition: 'center center',
+      //   backgroundSize: 'cover',
+      // }}
       ></ImageBox>
     </Container>
   );
@@ -80,9 +80,9 @@ const TextBox = styled.div`
   position: absolute;
 
   z-index: 2;
-  //   background-color: rgba(0, 0, 0, 0.65);
-  background-color: rgba(127, 114, 95, 0.65);
-  //   background-color: rgba(255, 254, 242, 0.65);
+
+  // background-color: rgba(127, 114, 95, 0.65);
+  background-color: #6d5b74;
 
   //   background: linear-gradient(180deg, rgba(150, 150, 150, 0.7), transparent);
 
