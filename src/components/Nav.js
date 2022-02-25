@@ -40,7 +40,7 @@ function Nav(props) {
     <OuterContainer active={ScrollActive}>
       <InnerContainer>
         <Home>
-          <div onClick={scrollTo.toTop}>SWLEE_PORTFOLIO</div>
+          <div onClick={scrollTo.toTop}>SWLEE</div>
         </Home>
         <MenuBox>
           <div onClick={scrollTo.about}>ABOUT</div>
@@ -94,8 +94,8 @@ const Home = styled.div`
   //   font-size: 30px;
 
   div {
-    font-family: KOHIBOLD;
-    // font-family: Hyemin_Bold;
+    // font-family: SCDream7;
+    font-family: Hyemin_Bold;
     font-size: 30px;
     cursor: pointer;
   }
@@ -107,7 +107,7 @@ const MenuBox = styled.div`
 
   div {
     margin: 0 20px;
-    font-family: Hyemin_Bold;
+    font-family: Hyemin_Regular;
     font-size: 24px;
     cursor: pointer;
   }
