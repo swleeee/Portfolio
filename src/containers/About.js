@@ -7,7 +7,7 @@ import InnerContainer from '../components/InnerContainer';
 
 function About() {
   return (
-    <OuterContainer bg="#e6f0ef">
+    <OuterContainer>
       <InnerContainer>
         <Title word="ABOUT" />
 

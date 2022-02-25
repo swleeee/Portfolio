@@ -8,7 +8,7 @@ const OuterContainer = styled.div`
   //   background-color: #0f147a;
 
   //   background-color: #fa8c00;
-  background-color: ${(props) => (props.bg ? props.bg : '#aaa')};
+  background-color: ${(props) => (props.bg ? props.bg : '#e6f0ef')};
   //   background-color: #dfd6cf;
 
   width: 100%;

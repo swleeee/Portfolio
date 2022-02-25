@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
+import OuterContainer from '../components/OuterContainer';
+import InnerContainer from '../components/InnerContainer';
+import Title from '../components/Title';
+import ProjectCard from '../components/ProjectCard';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 import tuthree_img1 from '../images/project/Tuthree/TuThree1.png';
 import tuthree_img2 from '../images/project/Tuthree/TuThree2.png';
 import tuthree_img3 from '../images/project/Tuthree/TuThree3.png';
@@ -30,11 +38,6 @@ import pyhu_img9 from '../images/project/PYHU/PYHU9.png';
 import pyhu_img10 from '../images/project/PYHU/PYHU10.png';
 import pyhu_img11 from '../images/project/PYHU/PYHU11.png';
 import pyhu_img12 from '../images/project/PYHU/PYHU12.png';
-
-import ProjectCard from '../components/ProjectCard';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 
 const settings = {
   dots: true, // 슬라이드 밑에 점 보이게
@@ -147,9 +150,7 @@ function Project() {
   return (
     <OuterContainer>
       <InnerContainer>
-        <Title>
-          <div>Projects</div>
-        </Title>
+        <Title word="PROJECT" />
         {/* <Line /> */}
         {/* <Content> */}
         <SliderContainer {...settings}>
@@ -171,43 +172,6 @@ function Project() {
 
 export default Project;
 
-const OuterContainer = styled.div`
-  //   background-color: #dac3ac;
-  //   background-color: #746454;
-  //   background-color: #7f705e;
-  //   background-color: #6971fb;
-  //   background-color: #0f147a;
-
-  //   background-color: #fa8c00;
-  //   background-color: #ddd4ae;
-
-  width: 100%;
-  display: flex;
-  justify-content: center;
-`;
-const InnerContainer = styled.div`
-  padding: 40px 0;
-  //   overflow: hidden;
-
-  @media (min-width: 992px) and (max-width: 1299.98px) {
-  }
-
-  @media (min-width: 1300px) {
-    width: 1300px;
-  }
-`;
-const Title = styled.div`
-  font-size: 40px;
-  font-weight: bold;
-  //   border-bottom: 1px solid rgba(0, 0, 0, 0.7);
-  width: fit-content;
-  padding: 10px 0;
-  display: flex;
-  //   justify-content: center;
-  width: 100%;
-  //   color: #746454;
-  padding-left: 20px;
-`;
 const Line = styled.div`
   width: 80%;
   height: 1px;

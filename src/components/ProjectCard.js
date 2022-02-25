@@ -58,10 +58,10 @@ function ProjectCard(props) {
             {/* <div>{name}</div> */}
           </ImgBox>
           <Content>
-            <Section>
+            {/* <Section>
               <Subject>인원</Subject>
               <SubContent>{tag}</SubContent>
-            </Section>
+            </Section> */}
             <Section>
               <Subject>주제</Subject>
               <SubContent>{description}</SubContent>
@@ -76,18 +76,16 @@ function ProjectCard(props) {
                 {func &&
                   func.map((item, idx) => {
                     return (
-                      <div>
-                        <Front
-                          onMouseOver={() => {
-                            //   console.info(idx);
-                            setTooltip(idx);
-                          }}
-                          onMouseLeave={() => {
-                            setTooltip(-1);
-                          }}
-                        >
-                          {item.overview}
-                        </Front>
+                      <div
+                        onMouseOver={() => {
+                          //   console.info(idx);
+                          setTooltip(idx);
+                        }}
+                        onMouseLeave={() => {
+                          setTooltip(-1);
+                        }}
+                      >
+                        <Front>{item.overview}</Front>
                         <Back active={Tooltip === idx}>
                           <div>{item.detail}</div>
                           <div></div>
@@ -125,13 +123,16 @@ export default ProjectCard;
 const OuterContainer = styled.div`
   width: 100%;
   //   height: 100%;
-  background-color: white;
+  background-color: #e6f0ef;
   display: flex;
   justify-content: center;
 `;
 const Container = styled.div`
   //   border: 1px solid red;
-  background-color: #7f705e;
+  // background-color: #ce8365;
+  // background-color: #5972a4;
+  background-color: #89a28a;
+
   cursor: pointer;
   width: 80%;
   padding-bottom: 30px;
@@ -139,6 +140,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   box-shadow: -5px 7px 7px rgba(0, 0, 0, 0.8);
+  // border: 3px solid #e6f0ef;
   border-radius: 5px;
   //   align-items: center;
   //   height: 220px;
@@ -192,11 +194,8 @@ const Title = styled.div`
       font-size: 40px;
       font-weight: 600;
       margin-right: 10px;
+      font-family: SCDream5;
     }
-    // span:nth-of-type(2) {
-    //   border-radius: 50px;
-    //   background-color: red;
-    // }
 
     text-align: center;
     padding: 30px;
@@ -209,7 +208,7 @@ const Title = styled.div`
     width: 0px;
     height: 0px;
     border-bottom: 70px solid #7f705e;
-    border-right: 130px solid white; /*Set to background color, not transparent!*/
+    border-right: 130px solid #e6f0ef;
     // -webkit-box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
     // -moz-box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
     // box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.3);
@@ -225,15 +224,18 @@ const Title = styled.div`
     // width: 130px;
     // height: 70px;
 
-    border: 25px solid #ddd4ae; /* All borders set */
-    border-left: 0; /* Remove left border */
-    border-right: 30px solid transparent; /* Right transparent */
+    border: 25px solid #4f4546;
+
+    border-left: 0;
+    border-right: 30px solid transparent;
     width: 150px;
   }
   div:nth-of-type(4) {
     position: absolute;
     top: 40px;
     left: 30px;
+    color: #fff;
+    font-family: SCDream3;
     // border: 1px solid rgba(0, 0, 0, 0.9);
     // border-radius: 10px;
   }
@@ -263,23 +265,34 @@ const FuncBox = styled.div`
     // min-width: 80px;
     text-align: center;
     // width: 100%;
-    height: 25px;
+    height: 30px;
     padding: 3px 7px;
-    margin: 0 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
     box-sizing: border-box;
-    background-color: green;
+    // background-color: #c9bebb;
+    // background-color: #ced9dc;
+    background-color: #a97eaa;
     border-radius: 30px;
     font-size: 14px;
     position: relative;
+    // color: #fff;
+    font-family: SCDream3;
     &:hover {
-      background-color: blue;
+      background-color: #6656a1;
+      color: white;
     }
   }
 `;
 const Subject = styled.div`
   width: 80px;
-  height: 25px;
-  background-color: #bbb;
+  height: 30px;
+  // background-color: #c9bebb;
+  // background-color: #ced9dc;
+  background-color: #6a796f;
+
   border-radius: 30px;
   display: flex;
   justify-content: center;
@@ -287,11 +300,16 @@ const Subject = styled.div`
   //   border: 2px solid green;
   margin-right: 10px;
   font-size: 18px;
+  font-family: SCDream5;
 `;
 const SubContent = styled.div`
   flex: 1;
+  font-family: SCDream3;
+  display: flex;
+  align-items: center;
   a {
     text-decoration: none;
+    color: black;
   }
 `;
 
@@ -300,7 +318,7 @@ const Front = styled.div`
 `;
 const Back = styled.div`
   //   border: 2px solid black;
-  background-color: yellow;
+  background-color: #dd9c62;
 
   position: absolute;
   bottom: 60px;
@@ -310,7 +328,8 @@ const Back = styled.div`
   width: 200px;
   //   height: 230px;
   display: ${(props) => (props.active ? 'block' : 'none')};
-  border: 1px solid;
+  color: black;
+  // border: 1px solid;
   border-radius: 5px;
   padding: 5px;
   > div:nth-of-type(1) {
@@ -326,7 +345,7 @@ const Back = styled.div`
     bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
-    border-top: 30px solid yellow;
+    border-top: 30px solid #dd9c62;
     border-left: 30px solid transparent;
     border-right: 30px solid transparent;
     // border-bottom: none;
