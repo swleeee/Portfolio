@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 import profile_img from '../images/about/profile.png';
+import Title from '../components/Title';
+import OuterContainer from '../components/OuterContainer';
+import InnerContainer from '../components/InnerContainer';
 
 function About() {
   return (
-    <OuterContainer>
+    <OuterContainer bg="#e6f0ef">
       <InnerContainer>
-        <Title>
-          <div>ABOUT</div>
-        </Title>
+        <Title word="ABOUT" />
+
         <Summary>
           <div>
             "새로운 것을 탐구하고 도전함으로써 더욱더 성장하는 개발자가
@@ -44,78 +46,78 @@ function About() {
 
 export default About;
 
-const OuterContainer = styled.div`
-  //   background-color: #dac3ac;
-  //   background-color: #746454;
-  //   background-color: #7f705e;
-  //   background-color: #6971fb;
-  //   background-color: #0f147a;
+// const OuterContainer = styled.div`
+//   //   background-color: #dac3ac;
+//   //   background-color: #746454;
+//   //   background-color: #7f705e;
+//   //   background-color: #6971fb;
+//   //   background-color: #0f147a;
 
-  //   background-color: #fa8c00;
-  background-color: #e6f0ef;
-  //   background-color: #dfd6cf;
+//   //   background-color: #fa8c00;
+//   background-color: #e6f0ef;
+//   //   background-color: #dfd6cf;
 
-  width: 100%;
-  height: 800px;
-  display: flex;
-  justify-content: center;
-`;
-const InnerContainer = styled.div`
-  padding: 100px 0;
-  //   overflow: hidden;
+//   width: 100%;
+//   height: 800px;
+//   display: flex;
+//   justify-content: center;
+// `;
+// const InnerContainer = styled.div`
+//   padding: 100px 0;
+//   //   overflow: hidden;
 
-  @media (min-width: 992px) and (max-width: 1299.98px) {
-  }
+//   @media (min-width: 992px) and (max-width: 1299.98px) {
+//   }
 
-  @media (min-width: 1300px) {
-    width: 1300px;
-  }
-`;
-const Title = styled.div`
-  font-size: 60px;
-  font-weight: bold;
-  font-family: SB_L;
+//   @media (min-width: 1300px) {
+//     width: 1300px;
+//   }
+// `;
+// const Title = styled.div`
+//   font-size: 60px;
+//   font-weight: bold;
+//   font-family: SB_L;
 
-  //   border-bottom: 1px solid rgba(0, 0, 0, 0.7);
-  //   width: fit-content;
-  padding: 10px 0;
-  display: flex;
-  justify-content: center;
-  //   width: 100%;
-  //   color: #746454;
-  padding-left: 20px;
-  overflow: hidden;
-  margin-bottom: 45px;
-  div {
-    // width: 100%;
-    // text-align: center;
-    // display: flex;
-    display: inline-block;
-    // justify-content: center;
-    position: relative;
-    // margin: 0 10px;
-    &:before,
-    &:after {
-      content: '';
-      position: absolute;
-      height: 5px;
-      border-bottom: 1px solid black;
-      border-top: 1px solid black;
-      //   top: 0;
-      width: 600px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-    &:before {
-      right: 100%;
-      margin-right: 15px;
-    }
-    &:after {
-      left: 100%;
-      margin-left: 15px;
-    }
-  }
-`;
+//   //   border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+//   //   width: fit-content;
+//   padding: 10px 0;
+//   display: flex;
+//   justify-content: center;
+//   //   width: 100%;
+//   //   color: #746454;
+//   padding-left: 20px;
+//   overflow: hidden;
+//   margin-bottom: 45px;
+//   div {
+//     // width: 100%;
+//     // text-align: center;
+//     // display: flex;
+//     display: inline-block;
+//     // justify-content: center;
+//     position: relative;
+//     // margin: 0 10px;
+//     &:before,
+//     &:after {
+//       content: '';
+//       position: absolute;
+//       height: 5px;
+//       border-bottom: 1px solid black;
+//       border-top: 1px solid black;
+//       //   top: 0;
+//       width: 600px;
+//       top: 50%;
+//       transform: translateY(-50%);
+//     }
+//     &:before {
+//       right: 100%;
+//       margin-right: 15px;
+//     }
+//     &:after {
+//       left: 100%;
+//       margin-left: 15px;
+//     }
+//   }
+// `;
 const Summary = styled.div`
   div {
     width: 100%;

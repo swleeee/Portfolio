@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 import SkillCard from '../components/SkillCard';
-// import Card from '../components/SkillCard';
+import Title from '../components/Title';
+import OuterContainer from '../components/OuterContainer';
+import InnerContainer from '../components/InnerContainer';
+
 import hcj_img from '../images/skill/htmlcssjs.png';
 import react_img from '../images/skill/react.png';
 import mobx_img from '../images/skill/mobx.png';
@@ -46,6 +49,7 @@ const data = [
     content: 'clone, fork, pull request을 사용하여 협업한 경험이 있습니다.',
     src: `${github_img}`,
   },
+
   {
     name: 'Node.js',
     content:
@@ -56,11 +60,9 @@ const data = [
 
 function Skill() {
   return (
-    <OuterContainer>
+    <OuterContainer bg="#E38A8A">
       <InnerContainer>
-        <Title>
-          <div>SKILLS</div>
-        </Title>
+        <Title word="SKILLS" />
         {/* <Line /> */}
         <Content>
           {/* <Items> */}
@@ -76,42 +78,31 @@ function Skill() {
 
 export default Skill;
 
-const OuterContainer = styled.div`
-  //   background-color: #dac3ac;
-  //   background-color: #746454;
-  //   background-color: #7f705e;
-  //   background-color: #6971fb;
-  //   background-color: #0f147a;
+// const OuterContainer = styled.div`
+//   //   background-color: #dac3ac;
+//   //   background-color: #746454;
+//   //   background-color: #7f705e;
+//   //   background-color: #6971fb;
+//   //   background-color: #0f147a;
 
-  //   background-color: #fa8c00;
-  background-color: #ddd4ae;
+//   //   background-color: #fa8c00;
+//   background-color: #ddd4ae;
 
-  width: 100%;
-  display: flex;
-  justify-content: center;
-`;
-const InnerContainer = styled.div`
-  padding: 40px 0;
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+// `;
+// const InnerContainer = styled.div`
+//   padding: 40px 0;
 
-  @media (min-width: 992px) and (max-width: 1299.98px) {
-  }
+//   @media (min-width: 992px) and (max-width: 1299.98px) {
+//   }
 
-  @media (min-width: 1300px) {
-    width: 1300px;
-  }
-`;
-const Title = styled.div`
-  font-size: 40px;
-  font-weight: bold;
-  //   border-bottom: 1px solid rgba(0, 0, 0, 0.7);
-  width: fit-content;
-  padding: 10px 0;
-  display: flex;
-  //   justify-content: center;
-  width: 100%;
-  //   color: #746454;
-  padding-left: 20px;
-`;
+//   @media (min-width: 1300px) {
+//     width: 1300px;
+//   }
+// `;
+
 const Line = styled.div`
   width: 80%;
   height: 1px;
