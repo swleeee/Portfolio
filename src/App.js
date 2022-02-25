@@ -43,9 +43,9 @@ function App() {
       <RefBox ref={contactRef}>
         <Contact />
       </RefBox>
-      <Footer>
-        <div>© 2022. Lee Sang Won. All rights reserved.</div>
-      </Footer>
+      <Button onClick={scrollTo.toTop}>
+        <div />
+      </Button>
     </Container>
   );
 }
@@ -69,4 +69,32 @@ const RefBox = styled.div`
   z-index: 2;
 `;
 
-const Footer = styled.div``;
+const Button = styled.button`
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  z-index: 888;
+  border-radius: 50%;
+  // background-color: #a69777;
+  // background-color: #aaa;
+  background-color: #52575c;
+  // background-color: #8e8e90;
+
+  // border: 1px solid black;
+  border: none;
+  box-shadow: -1px 3px 7px 1px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  div {
+    width: 0px;
+    height: 0px;
+    border-bottom: 16px solid black;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    // z-index: 889;
+  }
+`;

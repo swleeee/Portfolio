@@ -16,6 +16,8 @@ function Contact() {
             <img src={mail_img} />
           </ImgBox> */}
           <div>tkddnjs0687@naver.com</div>
+
+          <div>© 2022. Lee Sang Won. All rights reserved.</div>
         </Content>
       </InnerContainer>
     </OuterContainer>
@@ -39,11 +41,18 @@ const Content = styled.div`
   // border: 3px solid red;
   width: 100%;
   display: flex;
-  justify-content: center;
-  // flex-direction: column;
-  div {
+  // justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  div:nth-of-type(1) {
     font-size: 32px;
     font-family: SCDream5;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  div:nth-of-type(2) {
+    font-size: 14px;
+    font-family: SCDream3;
     color: #fff;
   }
 `;

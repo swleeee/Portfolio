@@ -43,10 +43,10 @@ function Nav(props) {
           <div onClick={scrollTo.toTop}>SWLEE</div>
         </Home>
         <MenuBox>
-          <div onClick={scrollTo.about}>ABOUT</div>
-          <div onClick={scrollTo.skills}>SKILLS</div>
-          <div onClick={scrollTo.projects}>PROJECT</div>
-          <div onClick={scrollTo.contact}>CONTACT</div>
+          <MenuItem onClick={scrollTo.about}>ABOUT</MenuItem>
+          <MenuItem onClick={scrollTo.skills}>SKILLS</MenuItem>
+          <MenuItem onClick={scrollTo.projects}>PROJECT</MenuItem>
+          <MenuItem onClick={scrollTo.contact}>CONTACT</MenuItem>
         </MenuBox>
       </InnerContainer>
     </OuterContainer>
@@ -94,8 +94,8 @@ const Home = styled.div`
   //   font-size: 30px;
 
   div {
-    // font-family: SCDream7;
-    font-family: Hyemin_Bold;
+    font-family: esm_bold;
+    // font-family: Hyemin_Bold;
     font-size: 30px;
     cursor: pointer;
   }
@@ -104,11 +104,14 @@ const MenuBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
 
-  div {
-    margin: 0 20px;
-    font-family: Hyemin_Regular;
-    font-size: 24px;
-    cursor: pointer;
+const MenuItem = styled.div`
+  margin: 0 20px;
+  font-family: Hyemin_Bold;
+  font-size: 24px;
+  cursor: pointer;
+  &:hover {
+    color: #eab646;
   }
 `;

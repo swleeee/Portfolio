@@ -63,3 +63,21 @@
   font-weight: 50;
   src: url('./fonts/SCDream7.otf');
 }
+
+@font-face {
+  font-family: 'esm_bold';
+  font-weight: 50;
+  src: url('./fonts/esamanru\ Bold.ttf');
+}
+
+@font-face {
+  font-family: 'esm_medium';
+  font-weight: 50;
+  src: url('./fonts/esamanru\ Medium.ttf');
+}
+
+@font-face {
+  font-family: 'esm_light';
+  font-weight: 50;
+  src: url('./fonts/esamanru\ Light.ttf');
+}

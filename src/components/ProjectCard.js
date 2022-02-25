@@ -133,7 +133,7 @@ const Container = styled.div`
   // background-color: #5972a4;
   background-color: #89a28a;
 
-  cursor: pointer;
+  // cursor: pointer;
   width: 80%;
   padding-bottom: 30px;
   box-sizing: border-box;
@@ -261,6 +261,7 @@ const MainContent = styled.div``;
 const FuncBox = styled.div`
   display: flex;
   > div {
+    cursor: pointer;
     // width: 80px;
     // min-width: 80px;
     text-align: center;
