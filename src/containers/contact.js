@@ -55,6 +55,48 @@ const Content = styled.div`
     font-family: SCDream3;
     color: #fff;
   }
+
+  @media (min-width: 0px) and (max-width: 479.98px) {
+    padding: 16px;
+    div:nth-of-type(1) {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    div:nth-of-type(2) {
+      font-size: 10px;
+    }
+  }
+  @media (min-width: 480px) and (max-width: 767.98px) {
+    padding: 20px;
+    div:nth-of-type(1) {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+    div:nth-of-type(2) {
+      font-size: 11px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    padding: 25px;
+    div:nth-of-type(1) {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+    div:nth-of-type(2) {
+      font-size: 12px;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1299.98px) {
+    padding: 28px;
+    div:nth-of-type(1) {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    div:nth-of-type(2) {
+      font-size: 13px;
+    }
+  }
 `;
 
 const Items = styled.div`
