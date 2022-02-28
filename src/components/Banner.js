@@ -85,12 +85,27 @@ const Container = styled.div`
   width: 100%;
   height: 70vh;
   position: relative;
+
+  @media (min-width: 0px) and (max-width: 479.98px) {
+    height: 40vh;
+  }
+  @media (min-width: 480px) and (max-width: 767.98px) {
+    height: 50vh;
+  }
 `;
 
 const move = keyframes`
   0%   { transform: scale(1)   translate(30vw, -30px); }  
   33%  { transform: scale(0.8, 1) translate(75vw, 30vh) rotate(160deg); }  
   66%  { transform: scale(1.3) translate(0vw, 45vh) rotate(-20deg); }
+  100% { transform: scale(1)   translate(30vw, -30px); }
+  
+`;
+
+const mobile_move = keyframes`
+  0%   { transform: scale(1)   translate(30vw, -30px); }  
+  33%  { transform: scale(0.8, 1) translate(75vw, 20vh) rotate(160deg); }  
+  66%  { transform: scale(1.3) translate(0vw, 28vh) rotate(-20deg); }
   100% { transform: scale(1)   translate(30vw, -30px); }
   
 `;
@@ -194,6 +209,140 @@ const TextBox = styled.div`
       background: #2c2461;
       transform: translateY(50px) rotateX(90deg);
     }
+
+    @media (min-width: 0px) and (max-width: 479.98px) {
+      width: 120px;
+      height: 120px;
+      animation: ${mobile_move} 10s ease-in-out infinite;
+      .cube {
+        width: 60px;
+        height: 60px;
+      }
+
+      .front {
+        transform: translateZ(30px);
+      }
+
+      .back {
+        transform: translateZ(-30px);
+      }
+
+      .left {
+        transform: translateX(-30px) rotateY(90deg);
+      }
+
+      .right {
+        transform: translateX(30px) rotateY(90deg);
+      }
+
+      .top {
+        transform: translateY(-30px) rotateX(90deg);
+      }
+
+      .bottom {
+        transform: translateY(30px) rotateX(90deg);
+      }
+    }
+    @media (min-width: 480px) and (max-width: 767.98px) {
+      width: 150px;
+      height: 150px;
+      animation: ${mobile_move} 10s ease-in-out infinite;
+      .cube {
+        width: 70px;
+        height: 70px;
+      }
+
+      .front {
+        transform: translateZ(35px);
+      }
+
+      .back {
+        transform: translateZ(-35px);
+      }
+
+      .left {
+        transform: translateX(-35px) rotateY(90deg);
+      }
+
+      .right {
+        transform: translateX(35px) rotateY(90deg);
+      }
+
+      .top {
+        transform: translateY(-35px) rotateX(90deg);
+      }
+
+      .bottom {
+        transform: translateY(35px) rotateX(90deg);
+      }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      width: 180px;
+      height: 180px;
+
+      .cube {
+        width: 80px;
+        height: 80px;
+      }
+
+      .front {
+        transform: translateZ(40px);
+      }
+
+      .back {
+        transform: translateZ(-40px);
+      }
+
+      .left {
+        transform: translateX(-40px) rotateY(90deg);
+      }
+
+      .right {
+        transform: translateX(40px) rotateY(90deg);
+      }
+
+      .top {
+        transform: translateY(-40px) rotateX(90deg);
+      }
+
+      .bottom {
+        transform: translateY(40px) rotateX(90deg);
+      }
+    }
+
+    @media (min-width: 992px) and (max-width: 1299.98px) {
+      width: 190px;
+      height: 190px;
+
+      .cube {
+        width: 90px;
+        height: 90px;
+      }
+
+      .front {
+        transform: translateZ(45px);
+      }
+
+      .back {
+        transform: translateZ(-45px);
+      }
+
+      .left {
+        transform: translateX(-45px) rotateY(90deg);
+      }
+
+      .right {
+        transform: translateX(45px) rotateY(90deg);
+      }
+
+      .top {
+        transform: translateY(-45px) rotateX(90deg);
+      }
+
+      .bottom {
+        transform: translateY(45px) rotateX(90deg);
+      }
+    }
   }
 `;
 const Bar = styled.div`
@@ -217,6 +366,20 @@ const Name = styled.div`
   -webkit-transition: all 0.15s ease 0s;
   transform: ${(props) => props.active && 'translateY(-10px)'};
   font-family: SB_B;
+
+  @media (min-width: 0px) and (max-width: 479.98px) {
+    font-size: 28px;
+  }
+  @media (min-width: 480px) and (max-width: 767.98px) {
+    font-size: 36px;
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    font-size: 52px;
+  }
+
+  @media (min-width: 992px) and (max-width: 1299.98px) {
+    font-size: 64px;
+  }
 `;
 
 const textFadeIn = keyframes`
@@ -258,5 +421,27 @@ const Description = styled.div`
     word-break: keep-all;
     font-weight: bold;
     font-family: SCDream7;
+  }
+
+  @media (min-width: 0px) and (max-width: 479.98px) {
+    p {
+      font-size: 16px;
+    }
+  }
+  @media (min-width: 480px) and (max-width: 767.98px) {
+    p {
+      font-size: 17px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    p {
+      font-size: 19px;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1299.98px) {
+    p {
+      font-size: 20px;
+    }
   }
 `;
