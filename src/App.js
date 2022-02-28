@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import styled from 'styled-components';
 import app from './App.css';
 
+// import Nav from './components/MobileNav';
 import Nav from './components/Nav';
 import Banner from './components/Banner';
 import About from './containers/About';
@@ -10,8 +11,10 @@ import Project from './containers/Project';
 import Contact from './containers/Contact';
 
 function App() {
-  const scrollToRef = (ref) =>
+  const scrollToRef = (ref) => {
+    console.info(ref.current.offsetTop);
     window.scrollTo({ top: ref.current.offsetTop - 64, behavior: 'smooth' });
+  };
 
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
+import MobileMenuItem from './MobileMenuItem';
 
 // class Nav extends Component {
 //   render() {
@@ -48,6 +49,10 @@ function Nav(props) {
           <MenuItem onClick={scrollTo.projects}>PROJECT</MenuItem>
           <MenuItem onClick={scrollTo.contact}>CONTACT</MenuItem>
         </MenuBox>
+
+        <MobileMenuBox>
+          <MobileMenuItem scrollTo={scrollTo} />
+        </MobileMenuBox>
       </InnerContainer>
     </OuterContainer>
   );
@@ -77,11 +82,18 @@ const InnerContainer = styled.div`
   justify-content: space-between;
   // border-bottom: 3px solid black;
 
-  @media (min-width: 992px) and (max-width: 1299.98px) {
+  @media (min-width: 0px) and (max-width: 767.98px) {
+    width: calc(100% - 28px);
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    width: 720px;
   }
 
+  @media (min-width: 992px) and (max-width: 1299.98px) {
+    width: 900px;
+  }
   @media (min-width: 1300px) {
-    width: 1300px;
+    width: 1200px;
   }
 `;
 
@@ -99,11 +111,40 @@ const Home = styled.div`
     font-size: 30px;
     cursor: pointer;
   }
+
+  @media (min-width: 0px) and (max-width: 767.98px) {
+    div {
+      font-size: 26px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    div {
+      font-size: 28px;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1299.98px) {
+    div {
+      font-size: 29px;
+    }
+  }
 `;
 const MenuBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (min-width: 0px) and (max-width: 767.98px) {
+    display: none;
+  }
+`;
+
+const MobileMenuBox = styled.div`
+  display: none;
+  @media (min-width: 0px) and (max-width: 767.98px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const MenuItem = styled.div`
@@ -113,5 +154,19 @@ const MenuItem = styled.div`
   cursor: pointer;
   &:hover {
     color: #eab646;
+  }
+
+  @media (min-width: 0px) and (max-width: 767.98px) {
+    margin: 0 12px;
+    font-size: 20px;
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    margin: 0 16px;
+    font-size: 22px;
+  }
+
+  @media (min-width: 992px) and (max-width: 1299.98px) {
+    margin: 0 18px;
+    font-size: 23px;
   }
 `;
