@@ -14,7 +14,7 @@ function About() {
         <Summary>
           <div>
             "새로운 것을 탐구하고 도전함으로써 더욱더 성장하는 개발자가
-            되겠습니다."
+            되겠습니다!"
           </div>
         </Summary>
         <Content>
@@ -128,6 +128,20 @@ const Summary = styled.div`
     // color: #a69777;
     color: green;
     font-weight: bold;
+
+    @media (min-width: 0px) and (max-width: 479.98px) {
+      font-size: 18px;
+    }
+    @media (min-width: 480px) and (max-width: 767.98px) {
+      font-size: 22px;
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      font-size: 25px;
+    }
+
+    @media (min-width: 992px) and (max-width: 1299.98px) {
+      font-size: 28px;
+    }
   }
 `;
 const Line = styled.div`
@@ -142,6 +156,26 @@ const Content = styled.div`
   width: 100%;
   display: inline-flex;
   justify-content: space-evenly;
+
+  @media (min-width: 0px) and (max-width: 479.98px) {
+    padding: 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media (min-width: 480px) and (max-width: 767.98px) {
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    padding: 25px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width: 992px) and (max-width: 1299.98px) {
+    padding: 27px;
+  }
 `;
 
 const ImageBox = styled.div`
@@ -157,6 +191,24 @@ const ImageBox = styled.div`
     height: 100%;
     object-fit: cover;
   }
+
+  @media (min-width: 0px) and (max-width: 479.98px) {
+    width: 150px;
+    height: 150px;
+  }
+  @media (min-width: 480px) and (max-width: 767.98px) {
+    width: 200px;
+    height: 200px;
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    width: 250px;
+    height: 250px;
+  }
+
+  @media (min-width: 992px) and (max-width: 1299.98px) {
+    width: 300px;
+    height: 300px;
+  }
 `;
 
 const TextBox = styled.div`
@@ -168,5 +220,37 @@ const TextBox = styled.div`
     font-family: SCDream3;
     font-size: 16px;
     line-height: 1.8;
+  }
+
+  @media (min-width: 0px) and (max-width: 479.98px) {
+    padding: 6px 8px;
+    width: 100%;
+    margin-top: 20px;
+    div {
+      font-size: 11px;
+    }
+  }
+  @media (min-width: 480px) and (max-width: 767.98px) {
+    padding: 8px 10px;
+    width: 100%;
+    margin-top: 30px;
+    div {
+      font-size: 12px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    padding: 9px 12px;
+    width: 100%;
+    margin-top: 30px;
+    div {
+      font-size: 14px;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1299.98px) {
+    padding: 9px 13px;
+    div {
+      font-size: 15px;
+    }
   }
 `;

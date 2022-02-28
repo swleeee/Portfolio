@@ -44,4 +44,18 @@ const Item = styled.div`
       margin-left: 15px;
     }
   }
+
+  @media (min-width: 0px) and (max-width: 479.98px) {
+    font-size: 30px;
+  }
+  @media (min-width: 480px) and (max-width: 767.98px) {
+    font-size: 36px;
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    font-size: 44px;
+  }
+
+  @media (min-width: 992px) and (max-width: 1299.98px) {
+    font-size: 52px;
+  }
 `;
