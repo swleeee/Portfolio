@@ -112,12 +112,16 @@ const Line = styled.div`
 const Content = styled.div`
   display: inline-flex;
   justify-content: flex-start;
-  //   align-content: space-around;
+
   flex-wrap: wrap;
-  //   margin: 0 auto;
-  //   margin-right: auto;
-  //   width: 100%;
-  //   border: 1px solid red;
+
+  @media (min-width: 0px) and (max-width: 479.98px) {
+    justify-content: center;
+    width: 100%;
+  }
+  @media (min-width: 480px) and (max-width: 767.98px) {
+    justify-content: center;
+  }
 `;
 
 const Items = styled.div`
