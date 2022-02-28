@@ -232,4 +232,17 @@ const SliderContainer = styled(Slider)`
     bottom: 10px;
     // left: 10px;
   }
+
+  @media (min-width: 0px) and (max-width: 479.98px) {
+    height: 850px;
+  }
+  @media (min-width: 480px) and (max-width: 767.98px) {
+    height: 850px;
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    height: 850px;
+  }
+
+  @media (min-width: 992px) and (max-width: 1299.98px) {
+  }
 `;
