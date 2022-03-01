@@ -100,4 +100,54 @@ const Button = styled.button`
     border-right: 8px solid transparent;
     // z-index: 889;
   }
+
+  @media (min-width: 0px) and (max-width: 479.98px) {
+    bottom: 12px;
+    right: 12px;
+    width: 28px;
+    height: 28px;
+
+    div {
+      border-bottom: 8px solid black;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+    }
+  }
+  @media (min-width: 480px) and (max-width: 767.98px) {
+    bottom: 15px;
+    right: 15px;
+    width: 32px;
+    height: 32px;
+
+    div {
+      border-bottom: 12px solid black;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+
+    div {
+      border-bottom: 14px solid black;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1299.98px) {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+
+    div {
+      border-bottom: 16px solid black;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+    }
+  }
 `;
