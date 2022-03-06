@@ -128,7 +128,7 @@ const data = [
       },
     ],
     tech: 'Android, Java, Tensorflow',
-    link: '',
+    link: 'https://github.com/swleeee/put_your_health_up',
 
     img_src: [
       `${pyhu_img1}`,
