@@ -103,7 +103,7 @@ function ProjectCard(props) {
             </Section>
             <Section>
               {' '}
-              <Subject>링크</Subject>
+              <Subject>깃허브</Subject>
               <SubContent>
                 {' '}
                 <a href={link} target="_blank">
